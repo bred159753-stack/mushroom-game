@@ -17,7 +17,7 @@ const MushroomGame = () => {
     if (gameState === 'lobby' || gameState === 'playing') {
       // 本地測試用 ws://localhost:3001
       // 部署後改成你的伺服器網址，例如：wss://your-server.onrender.com
-      wsRef.current = new WebSocket('ws://localhost:3001');
+      wsRef.current = new WebSocket('wss://mushroom-game-backend.onrender.com');
       
       wsRef.current.onopen = () => {
         console.log('WebSocket 已連線');
